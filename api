@@ -1,0 +1,29 @@
+function showcontact(){
+const apiKey = 'D4cpGZqJVv-kydQgp0JCZA';
+const domain = 'ags1';
+const contactId = '402002717776';
+
+axios.get(`https://${domain}.freshsales.io/api/contacts/${contactId}`, {
+  headers: {
+    'Authorization': `Token token=${apiKey}`,
+    'Content-Type': 'application/json'
+  }
+})
+ fetch(url,{
+  method:"get",
+  headers:headers
+ })
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+}
+
+function useTemplate(title, template) {
+  return {
+    title,
+    template
+  };
+}
